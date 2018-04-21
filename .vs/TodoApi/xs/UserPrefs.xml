@@ -1,0 +1,23 @@
+﻿<Properties StartupConfiguration="{4DA490B4-B88F-4C6C-8B6D-60C52CBB31A6}|Default">
+  <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="TodoApi/Controllers/ValuesController.cs" Line="70" Column="30" />
+      <File FileName="TodoApi/Startup.cs" Line="29" Column="145" />
+      <File FileName="TodoApi/Program.cs" Line="17" Column="1" />
+      <File FileName="TodoApi/appsettings.Development.json" Line="1" Column="1" />
+      <File FileName="TodoApi/appsettings.json" Line="19" Column="3" />
+      <File FileName="TodoApi/Models/SenDBContext.cs" Line="97" Column="10" />
+      <File FileName="TodoApi/Models/Developers.cs" Line="12" Column="9" />
+      <File FileName="TodoApi/Models/DevResult.cs" Line="8" Column="80" />
+      <File FileName="TodoApi/Models/DeveloperDailyReport.cs" Line="12" Column="9" />
+      <File FileName="TodoApi/Controllers/TasksController.cs" Line="15" Column="34" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.TodoApi PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>

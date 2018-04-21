@@ -1,0 +1,10 @@
+/Users/senura/Projects/TodoApi/TodoApi/bin/Debug/netcoreapp2.0/TodoApi.deps.json
+/Users/senura/Projects/TodoApi/TodoApi/bin/Debug/netcoreapp2.0/TodoApi.runtimeconfig.json
+/Users/senura/Projects/TodoApi/TodoApi/bin/Debug/netcoreapp2.0/TodoApi.runtimeconfig.dev.json
+/Users/senura/Projects/TodoApi/TodoApi/bin/Debug/netcoreapp2.0/TodoApi.dll
+/Users/senura/Projects/TodoApi/TodoApi/bin/Debug/netcoreapp2.0/TodoApi.pdb
+/Users/senura/Projects/TodoApi/TodoApi/obj/Debug/netcoreapp2.0/TodoApi.csproj.CoreCompileInputs.cache
+/Users/senura/Projects/TodoApi/TodoApi/obj/Debug/netcoreapp2.0/TodoApi.AssemblyInfoInputs.cache
+/Users/senura/Projects/TodoApi/TodoApi/obj/Debug/netcoreapp2.0/TodoApi.AssemblyInfo.cs
+/Users/senura/Projects/TodoApi/TodoApi/obj/Debug/netcoreapp2.0/TodoApi.dll
+/Users/senura/Projects/TodoApi/TodoApi/obj/Debug/netcoreapp2.0/TodoApi.pdb
