@@ -55,7 +55,7 @@ namespace TodoApi.Controllers
 
         // PUT api/tasks/2
         [HttpPut]
-        public IActionResult updateDevData(int id, [FromBody]DeveloperDailyReport updatingData)
+        public IActionResult updateDevData([FromBody]DeveloperDailyReport updatingData)
         {
             if (updatingData == null)
             {
@@ -71,6 +71,37 @@ namespace TodoApi.Controllers
                 return BadRequest();
                 
         }
+
+
+
+        //        {
+        //    "did":2,
+        //    "pid":2,
+        //    "date":"06/07/2018",
+        //}
+
+        // DELETE api/tasks
+        [HttpDelete]
+        public IActionResult deleteDevData([FromBody]DeveloperDailyReport updatingData)
+        {
+            if (updatingData == null)
+            {
+                return BadRequest();
+            }
+            Models.SenDBContext _context = HttpContext.RequestServices.GetService(typeof(TodoApi.Models.SenDBContext)) as Models.SenDBContext;
+
+            int status = _context.deleteDeveloperDailyRecord(updatingData);
+
+            if (status == 1)
+                return Ok();
+            else
+                return BadRequest();
+
+        }
+
+
+
+
 
 
     }

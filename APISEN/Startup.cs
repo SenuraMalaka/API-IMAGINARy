@@ -28,8 +28,6 @@ namespace TodoApi
 
             services.Add(new ServiceDescriptor(typeof(SenDBContext), new SenDBContext(Configuration.GetConnectionString("DefaultConnection"))));  
      
-
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

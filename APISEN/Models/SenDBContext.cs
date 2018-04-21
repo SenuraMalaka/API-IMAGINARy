@@ -145,5 +145,32 @@ namespace TodoApi.Models
         }
 
 
+
+        public int deleteDeveloperDailyRecord(DeveloperDailyReport devReportData)
+        {
+
+            int status = 0;
+
+
+            using (MySqlConnection conn = GetConnection())
+            {
+                conn.Open();
+
+                String delQuery = "DELETE FROM dev_project WHERE did=" + devReportData.DID + " " +
+                                                                                    "AND " + "pid=" + devReportData.PID +
+                                                                                    " AND date=" + "\'"
+                                                                                    + devReportData.Date.ToString("yyyy-MM-dd") + "\'"; ;
+
+
+                MySqlCommand cmd = new MySqlCommand(delQuery, conn);
+
+
+                status = cmd.ExecuteNonQuery();
+
+            }
+            return status;
+        }
+
+
     }
 }

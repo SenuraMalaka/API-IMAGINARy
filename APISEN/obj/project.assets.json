@@ -12713,11 +12713,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/senura/Projects/APISEN/APISEN/ApiSenDS.csproj",
+      "projectUniqueName": "/Users/senura/Projects/API-IMAGINARy/APISEN/ApiSenDS.csproj",
       "projectName": "ApiSenDS",
-      "projectPath": "/Users/senura/Projects/APISEN/APISEN/ApiSenDS.csproj",
+      "projectPath": "/Users/senura/Projects/API-IMAGINARy/APISEN/ApiSenDS.csproj",
       "packagesPath": "/Users/senura/.nuget/packages/",
-      "outputPath": "/Users/senura/Projects/APISEN/APISEN/obj",
+      "outputPath": "/Users/senura/Projects/API-IMAGINARy/APISEN/obj",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
