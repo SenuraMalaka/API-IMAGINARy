@@ -24,6 +24,9 @@ namespace TodoApi.Controllers
 
 
         // GET api/values
+        /// <summary>
+        /// Get All the Developers
+        /// </summary>
         [HttpGet]
         public IEnumerable<Models.Developers> Get()
         {
@@ -38,6 +41,9 @@ namespace TodoApi.Controllers
 
 
         // GET api/values/5
+        /// <summary>
+        /// Get a Specific Developer Details
+        /// </summary>
         [HttpGet("{id}",Name ="GetDevByID" )]
         public String Get(int id)
         {
@@ -62,6 +68,10 @@ namespace TodoApi.Controllers
         }
 
         // POST api/values
+
+        /// <summary>
+        /// Create A Developer
+        /// </summary>
         [HttpPost]
         public IActionResult CreateANewDeveloper([FromBody]Developers newDevData)
         {

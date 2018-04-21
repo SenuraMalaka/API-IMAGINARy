@@ -20,6 +20,10 @@ namespace TodoApi.Controllers
 
 
         // POST api/tasks
+
+        /// <summary>
+        /// Create A Daily Record
+        /// </summary>
         [HttpPost]
         public IActionResult CreateANewDeveloper([FromBody]DeveloperDailyReport reportingData)
         {
@@ -54,6 +58,10 @@ namespace TodoApi.Controllers
         //}
 
         // PUT api/tasks/2
+
+        /// <summary>
+        /// Update A Specific Developer Daily Record
+        /// </summary>
         [HttpPut]
         public IActionResult updateDevData([FromBody]DeveloperDailyReport updatingData)
         {
@@ -81,6 +89,9 @@ namespace TodoApi.Controllers
         //}
 
         // DELETE api/tasks
+        /// <summary>
+        /// Delete A Specific Developer Daily Record
+        /// </summary>
         [HttpDelete]
         public IActionResult deleteDevData([FromBody]DeveloperDailyReport updatingData)
         {
