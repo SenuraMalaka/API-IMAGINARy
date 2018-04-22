@@ -9,7 +9,6 @@ namespace TodoApi.Controllers
     {
 
 
-
         //        {
         //    "did":2,
         //    "pid":2,
@@ -25,7 +24,7 @@ namespace TodoApi.Controllers
         /// Create A Daily Record
         /// </summary>
         [HttpPost]
-        public IActionResult CreateANewDeveloper([FromBody]DeveloperDailyReport reportingData)
+        public IActionResult CreateANewDailyRecord([FromBody]DeveloperDailyReport reportingData)
         {
             if (reportingData == null)
             {

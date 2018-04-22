@@ -104,14 +104,20 @@ namespace TodoApi.Models
         {
 
             int status = 0;
+            int overTimeHours = 0;
+
+            if(devReportData.Hours>8){
+                overTimeHours = devReportData.Hours - 8;
+                devReportData.Hours = 8;
+            }
 
 
             using (MySqlConnection conn = GetConnection())
             {
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand("insert into dev_project (did,pid,date,hours,description) " +
+                MySqlCommand cmd = new MySqlCommand("insert into dev_project (did,pid,date,hours,ot,description) " +
                                                     "values ("+devReportData.DID+","+devReportData.PID+"," 
-                                                    +"\'"+devReportData.Date.ToString("yyyy-MM-dd")+"\'"+","+devReportData.Hours+","+
+                                                    +"\'"+devReportData.Date.ToString("yyyy-MM-dd")+"\'"+","+devReportData.Hours+","+overTimeHours+","+
                                                     "\'" + devReportData.Description + "\')", conn);
 
                 status = cmd.ExecuteNonQuery();
@@ -125,6 +131,13 @@ namespace TodoApi.Models
         {
 
             int status = 0;
+            int overTimeHours = 0;
+
+            if (devReportData.Hours > 8)
+            {
+                overTimeHours = devReportData.Hours - 8;
+                devReportData.Hours = 8;
+            }
 
 
             using (MySqlConnection conn = GetConnection())
@@ -132,7 +145,8 @@ namespace TodoApi.Models
                 conn.Open();
 
                 String upQuery = "UPDATE dev_project SET date = " + "\'" + devReportData.Date.ToString("yyyy-MM-dd") + "\'" + ", hours = " + devReportData.Hours +
-                                                                                      " WHERE did=" + devReportData.DID + " AND " + "pid=" + devReportData.PID +
+                                                                                        " , ot="+overTimeHours+", description="+"\'"+devReportData.Description+"\'"+
+                                                                                        " WHERE did=" + devReportData.DID + " AND " + "pid=" + devReportData.PID +
                                                                                         " AND date=" + "\'" + devReportData.Date.ToString("yyyy-MM-dd")+ "\'";
 
                 MySqlCommand cmd = new MySqlCommand(upQuery, conn);
@@ -170,6 +184,8 @@ namespace TodoApi.Models
             }
             return status;
         }
+
+        //SELECT* FROM dev_project WHERE date BETWEEN >= '2018-01-10' AND '2018-05-01';
 
 
     }
