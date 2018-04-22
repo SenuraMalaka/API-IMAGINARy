@@ -115,10 +115,24 @@ namespace TodoApi.Models
             using (MySqlConnection conn = GetConnection())
             {
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand("insert into dev_project (did,pid,date,hours,ot,description) " +
-                                                    "values ("+devReportData.DID+","+devReportData.PID+"," 
-                                                    +"\'"+devReportData.Date.ToString("yyyy-MM-dd")+"\'"+","+devReportData.Hours+","+overTimeHours+","+
-                                                    "\'" + devReportData.Description + "\')", conn);
+
+                String _insertQuery = "insert into devProjectReports (dpid, date, hours, ot, description) " +
+                    "values ((select dpid from devProject where did=" + devReportData.DID + " and pid=" + devReportData.PID + ")," +
+                                                                                     "'" + devReportData.Date.ToString("yyyy-MM-dd")+ 
+                                                                                     "'," + devReportData.Hours + "," + overTimeHours + ",'" + devReportData.Description + "')";
+
+
+
+                MySqlCommand cmd = new MySqlCommand(_insertQuery, conn);
+
+
+
+                //MySqlCommand cmd = new MySqlCommand("insert into dev_project (did,pid,date,hours,ot,description) " +
+                                                    //"values ("+devReportData.DID+","+devReportData.PID+"," 
+                                                    //+"\'"+devReportData.Date.ToString("yyyy-MM-dd")+"\'"+","+devReportData.Hours+","+overTimeHours+","+
+                                                    //"\'" + devReportData.Description + "\')", conn);
+
+
 
                 status = cmd.ExecuteNonQuery();
 
@@ -144,9 +158,9 @@ namespace TodoApi.Models
             {
                 conn.Open();
 
-                String upQuery = "UPDATE dev_project SET date = " + "\'" + devReportData.Date.ToString("yyyy-MM-dd") + "\'" + ", hours = " + devReportData.Hours +
+                String upQuery = "UPDATE devProjectReports SET date = " + "\'" + devReportData.Date.ToString("yyyy-MM-dd") + "\'" + ", hours = " + devReportData.Hours +
                                                                                         " , ot="+overTimeHours+", description="+"\'"+devReportData.Description+"\'"+
-                                                                                        " WHERE did=" + devReportData.DID + " AND " + "pid=" + devReportData.PID +
+                                                                                              " WHERE dpid=(select dpid from devProject where did=" + devReportData.DID + " AND " + "pid=" + devReportData.PID +")"+
                                                                                         " AND date=" + "\'" + devReportData.Date.ToString("yyyy-MM-dd")+ "\'";
 
                 MySqlCommand cmd = new MySqlCommand(upQuery, conn);
