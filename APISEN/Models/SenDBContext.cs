@@ -184,10 +184,9 @@ namespace TodoApi.Models
             {
                 conn.Open();
 
-                String delQuery = "DELETE FROM dev_project WHERE did=" + devReportData.DID + " " +
-                                                                                    "AND " + "pid=" + devReportData.PID +
+                String delQuery = "DELETE FROM devProjectReports WHERE dpid=(select dpid from devProject where did=" + devReportData.DID + " AND " + "pid=" + devReportData.PID + ")" +
                                                                                     " AND date=" + "\'"
-                                                                                    + devReportData.Date.ToString("yyyy-MM-dd") + "\'"; ;
+                                                                                    + devReportData.Date.ToString("yyyy-MM-dd") + "\'";
 
 
                 MySqlCommand cmd = new MySqlCommand(delQuery, conn);
