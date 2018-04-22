@@ -20,6 +20,7 @@
 /Users/senura/Projects/APISEN/APISEN/obj/Debug/netcoreapp2.0/ApiSenDS.AssemblyInfo.cs
 /Users/senura/Projects/APISEN/APISEN/obj/Debug/netcoreapp2.0/ApiSenDS.dll
 /Users/senura/Projects/APISEN/APISEN/obj/Debug/netcoreapp2.0/ApiSenDS.pdb
+/Users/senura/Projects/API-IMAGINARy/APISEN/bin/Debug/netcoreapp2.0/ApiSenDS.xml
 /Users/senura/Projects/API-IMAGINARy/APISEN/bin/Debug/netcoreapp2.0/ApiSenDS.deps.json
 /Users/senura/Projects/API-IMAGINARy/APISEN/bin/Debug/netcoreapp2.0/ApiSenDS.runtimeconfig.json
 /Users/senura/Projects/API-IMAGINARy/APISEN/bin/Debug/netcoreapp2.0/ApiSenDS.runtimeconfig.dev.json

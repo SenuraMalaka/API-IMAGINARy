@@ -5,6 +5,7 @@ using TodoApi.Models;
 
 namespace ApiSenDS.Controllers
 {
+    
     [Route("api/[controller]")]
     public class DevelopersController: Controller
     {
@@ -12,6 +13,10 @@ namespace ApiSenDS.Controllers
         /// <summary>
         /// Get The OverTime for a  Developer
         /// </summary>
+        /// <param name="id">Developer ID</param>
+        /// <returns>Json Object</returns>
+        /// <response code="200">Json Object with OverTime Value</response>
+        /// <response code="400">Not Successful</response>
         [HttpGet("{id}")]
         public OTResult Get(int id)
         {
@@ -21,7 +26,7 @@ namespace ApiSenDS.Controllers
                 DeveloperID =id
             };
 
-            return result;//"{\"overtime\":\""+context.GetDeveloperOverTime(id)+"\"}";
+            return result;
         }
     }
 }

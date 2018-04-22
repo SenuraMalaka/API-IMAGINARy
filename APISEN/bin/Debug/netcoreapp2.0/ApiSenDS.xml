@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ApiSenDS</name>
+    </assembly>
+    <members>
+        <member name="M:ApiSenDS.Controllers.DevelopersController.Get(System.Int32)">
+            <summary>
+            Get The OverTime for a  Developer
+            </summary>
+            <param name="id">Developer ID</param>
+            <returns>Json Object</returns>
+            <response code="200">Json Object with OverTime Value</response>
+            <response code="400">Not Successful</response>
+        </member>
+        <member name="M:ApiSenDS.Controllers.ProjectsController.Get(System.Int32)">
+            <summary>
+            Get The Summary of Projects by ManagerID
+            </summary>
+        </member>
+        <member name="M:TodoApi.Controllers.TasksController.CreateANewDailyRecord(TodoApi.Models.DeveloperDailyReport)">
+            <summary>
+            Create A Daily Record
+            </summary>
+        </member>
+        <member name="M:TodoApi.Controllers.TasksController.updateDevData(TodoApi.Models.DeveloperDailyReport)">
+            <summary>
+            Update A Specific Developer Daily Record
+            </summary>
+        </member>
+        <member name="M:TodoApi.Controllers.TasksController.deleteDevData(TodoApi.Models.DeveloperDailyReport)">
+            <summary>
+            Delete A Specific Developer Daily Record
+            </summary>
+        </member>
+        <member name="M:TodoApi.Controllers.ValuesController.Get">
+            <summary>
+            Get All the Developers
+            </summary>
+        </member>
+        <member name="M:TodoApi.Controllers.ValuesController.Get(System.Int32)">
+            <summary>
+            Get a Specific Developer Details
+            </summary>
+        </member>
+        <member name="M:TodoApi.Controllers.ValuesController.CreateANewDeveloper(TodoApi.Models.Developers)">
+            <summary>
+            Create A Developer
+            </summary>
+        </member>
+    </members>
+</doc>
