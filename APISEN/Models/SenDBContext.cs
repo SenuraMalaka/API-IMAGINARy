@@ -88,7 +88,36 @@ namespace TodoApi.Models
                 }  
                 }  
                 return list;  
-          } 
+          }
+
+
+
+
+
+        public String GetDeveloperOverTime(int did)
+        {
+            String overTime = null;
+
+            using (MySqlConnection conn = GetConnection())
+            {
+
+                String _overTimeQuery = "select sum(dpr.ot) from developers d, devProject dp, devProjectReports dpr " +
+                    "where d.did=" + did + " and d.did=dp.did and dp.dpid=dpr.dpid;";
+
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand(_overTimeQuery, conn);
+
+
+                var result = cmd.ExecuteScalar();
+
+                if (result != null)
+                {
+                    overTime = result.ToString();
+                }
+
+                return overTime;
+            }
+        }
 
 
 
