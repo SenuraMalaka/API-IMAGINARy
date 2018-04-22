@@ -48,7 +48,50 @@ namespace TodoApi.Models
                 }  
                 }  
                 return list;  
+          }
+
+
+
+
+
+
+        public List<ProjectsResultSummary> GetProjectSummary(int managerID)  
+        {  
+            List<ProjectsResultSummary> list = new List<ProjectsResultSummary>();  
+  
+            using (MySqlConnection conn = GetConnection())  
+            {
+
+                String _ProjectsSummaryQuery = "select p.name as 'Project', d.name as 'Members', sum(dpr.hours) as 'Total Hours', sum(dpr.ot) as 'Total OverTime'," +
+                    " concat(round(( sum(dpr.hours)/(select sum(dpr.hours) from project p, developers d,devProject dp, devProjectReports dpr, managers m where p.mid="+managerID+" " +
+                    "and p.mid=m.mid and dp.dpid=dpr.dpid and d.did=dp.did and p.pid=dp.pid) * 100 ),2),'%') AS 'Contribution' from project p, developers d,devProject dp, " +
+                    "devProjectReports dpr, managers m where p.mid="+managerID+" and p.mid=m.mid and dp.dpid=dpr.dpid and d.did=dp.did and p.pid=dp.pid "+
+                    "group by dpr.dpid";
+
+
+                conn.Open();  
+                MySqlCommand cmd = new MySqlCommand(_ProjectsSummaryQuery, conn);  
+  
+                using (var reader = cmd.ExecuteReader())  
+                {  
+                    while (reader.Read())  
+                    {  
+                        list.Add(new ProjectsResultSummary()  
+                        {  
+                            Project = reader["Project"].ToString(),
+                            MemberName=reader["Members"].ToString(),
+                            TotalHours=Convert.ToInt32(reader["Total Hours"]),
+                            TotalOvertime =Convert.ToInt32(reader["Total Overtime"]),
+                            Contribution=reader["Contribution"].ToString()
+                        });  
+                    }  
+                }  
+                }  
+                return list;  
           } 
+
+
+
 
 
 
@@ -108,7 +151,6 @@ namespace TodoApi.Models
 
             if(devReportData.Hours>8){
                 overTimeHours = devReportData.Hours - 8;
-                devReportData.Hours = 8;
             }
 
 
@@ -122,17 +164,13 @@ namespace TodoApi.Models
                                                                                      "'," + devReportData.Hours + "," + overTimeHours + ",'" + devReportData.Description + "')";
 
 
-
                 MySqlCommand cmd = new MySqlCommand(_insertQuery, conn);
-
 
 
                 //MySqlCommand cmd = new MySqlCommand("insert into dev_project (did,pid,date,hours,ot,description) " +
                                                     //"values ("+devReportData.DID+","+devReportData.PID+"," 
                                                     //+"\'"+devReportData.Date.ToString("yyyy-MM-dd")+"\'"+","+devReportData.Hours+","+overTimeHours+","+
                                                     //"\'" + devReportData.Description + "\')", conn);
-
-
 
                 status = cmd.ExecuteNonQuery();
 
@@ -150,7 +188,6 @@ namespace TodoApi.Models
             if (devReportData.Hours > 8)
             {
                 overTimeHours = devReportData.Hours - 8;
-                devReportData.Hours = 8;
             }
 
 

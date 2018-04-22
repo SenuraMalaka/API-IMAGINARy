@@ -1,24 +1,24 @@
 ﻿<Properties StartupConfiguration="{4DA490B4-B88F-4C6C-8B6D-60C52CBB31A6}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="APISEN/Models/SenDBContext.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="APISEN/Models/Developers.cs">
     <Files>
-      <File FileName="APISEN/Controllers/TasksController.cs" Line="41" Column="17" />
-      <File FileName="APISEN/Controllers/ValuesController.cs" Line="104" Column="12" />
+      <File FileName="APISEN/Controllers/TasksController.cs" Line="7" Column="6" />
+      <File FileName="APISEN/Controllers/ValuesController.cs" Line="57" Column="14" />
       <File FileName="APISEN/Models/DeveloperDailyReport.cs" Line="1" Column="1" />
-      <File FileName="APISEN/Models/Developers.cs" Line="1" Column="1" />
-      <File FileName="APISEN/Models/DevResult.cs" Line="1" Column="1" />
-      <File FileName="APISEN/Models/SenDBContext.cs" Line="174" Column="46" />
+      <File FileName="APISEN/Models/Developers.cs" Line="13" Column="3" />
+      <File FileName="APISEN/Models/DevResult.cs" Line="4" Column="20" />
+      <File FileName="APISEN/Models/SenDBContext.cs" Line="132" Column="48" />
       <File FileName="APISEN/Properties/launchSettings.json" Line="26" Column="23" />
       <File FileName="APISEN/appsettings.Development.json" Line="1" Column="1" />
       <File FileName="APISEN/appsettings.json" Line="1" Column="1" />
       <File FileName="APISEN/Program.cs" Line="1" Column="1" />
       <File FileName="APISEN/Startup.cs" Line="42" Column="10" />
+      <File FileName="APISEN/Controllers/ProjectsController.cs" Line="18" Column="34" />
+      <File FileName="APISEN/Models/ProjectsResultSummary.cs" Line="6" Column="9" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/senura/Projects/API-IMAGINARy/TodoApi/Models/SenDBContext.cs" relfile="TodoApi/Models/SenDBContext.cs" line="138" column="68" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.ApiSenDS PreferredExecutionTarget="MonoDevelop.Default" />

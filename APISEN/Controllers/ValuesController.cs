@@ -78,7 +78,7 @@ namespace TodoApi.Controllers
             if (newDevData == null)
             {
                 return BadRequest();
-            }else{}
+            }
 
             Models.SenDBContext _context = HttpContext.RequestServices.GetService(typeof(TodoApi.Models.SenDBContext)) as Models.SenDBContext;
 
