@@ -62,16 +62,16 @@ namespace ApiSenDS.Controllers
         /// <response code="400">Bad Request</response>
         /// <response code="500">Database Is Not Online</response>
         [HttpPost]
-        public IActionResult CreateANewDeveloper([FromBody]NewProject newProjData)
+        public IActionResult CreateAProject([FromBody]NewProject newProjData)
         {
-            if (newProjData == null || newProjData.Name == null)
+            if (newProjData == null || newProjData.Name == null || newProjData.MID==0)
             {
                 return BadRequest();
             }
 
             SenDBContext _context = HttpContext.RequestServices.GetService(typeof(TodoApi.Models.SenDBContext)) as SenDBContext;
 
-            String newDeveloperID = _context.InsertNewDeveloper(newProjData.Name);
+            String newDeveloperID = _context.InsertNewProject(newProjData.Name,newProjData.MID);
 
             if (newDeveloperID == null) return BadRequest();
             else

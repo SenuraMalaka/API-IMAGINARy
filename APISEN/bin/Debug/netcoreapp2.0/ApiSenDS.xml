@@ -53,7 +53,7 @@
             <response code="200">Json Array returned with Project Summary. An Empty Json Array will be returned if there is no records</response>
             <response code="500">Database Is Not Online</response>
         </member>
-        <member name="M:ApiSenDS.Controllers.ProjectsController.CreateANewDeveloper(TodoApi.Models.NewProject)">
+        <member name="M:ApiSenDS.Controllers.ProjectsController.CreateAProject(TodoApi.Models.NewProject)">
             <summary>
             Create A Project
             </summary>

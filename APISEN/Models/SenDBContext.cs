@@ -236,7 +236,7 @@ namespace TodoApi.Models
 
 
 
-        public String InsertNewProject(String pName)
+        public String InsertNewProject(String pName, int mid)
         {
             List<Developers> list = new List<Developers>();
 
@@ -246,7 +246,7 @@ namespace TodoApi.Models
             using (MySqlConnection conn = GetConnection())
             {
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand("insert into project (name) values (\'" + pName + "\')", conn);
+                MySqlCommand cmd = new MySqlCommand("insert into project (name,mid) values (\'" + pName + "\',"+mid+")", conn);
 
                 status = cmd.ExecuteNonQuery();
 
