@@ -4,14 +4,20 @@
         <name>ApiSenDS</name>
     </assembly>
     <members>
-        <member name="M:ApiSenDS.Controllers.DevelopersController.Get(System.Int32)">
+        <member name="M:ApiSenDS.Controllers.DevelopersController.Get(System.Int32,System.String)">
             <summary>
             Get The OverTime for a  Developer
             </summary>
             <param name="id">Developer ID</param>
             <returns>Json Object</returns>
             <response code="200">Json Object with OverTime Value</response>
+            <response code="204">No Content To Display</response>
             <response code="500">Database Is Not Online</response>
+        </member>
+        <member name="M:ApiSenDS.Controllers.DevelopersController.CreateANewDeveloper(TodoApi.Models.Developers)">
+            <summary>
+            Create A Developer
+            </summary>
         </member>
         <member name="M:ApiSenDS.Controllers.ProjectsController.Get(System.Int32)">
             <summary>
