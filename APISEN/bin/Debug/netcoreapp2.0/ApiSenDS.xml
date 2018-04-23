@@ -11,7 +11,7 @@
             <param name="id">Developer ID</param>
             <returns>Json Object</returns>
             <response code="200">Json Object with OverTime Value</response>
-            <response code="400">Not Successful</response>
+            <response code="500">Database Is Not Online</response>
         </member>
         <member name="M:ApiSenDS.Controllers.ProjectsController.Get(System.Int32)">
             <summary>
@@ -22,16 +22,29 @@
             <summary>
             Create A Daily Record
             </summary>
+            <returns>Http Response</returns>
+            <response code="200">Updated the record</response>
+            <response code="500">Database Is Not Online</response>
+            <response code="400">Invalid json</response>
+            <response code="201">Record Created Successfully</response>
         </member>
         <member name="M:TodoApi.Controllers.TasksController.updateDevData(TodoApi.Models.DeveloperDailyReport)">
             <summary>
             Update A Specific Developer Daily Record
             </summary>
+            <returns>Http Response</returns>
+            <response code="200">Updated the record</response>
+            <response code="500">Database Is Not Online</response>
+            <response code="400">Update resource not available</response>
         </member>
         <member name="M:TodoApi.Controllers.TasksController.deleteDevData(TodoApi.Models.DeveloperDailyReport)">
             <summary>
             Delete A Specific Developer Daily Record
             </summary>
+            <returns>Http Response</returns>
+            <response code="200">Deleted the record</response>
+            <response code="500">Database Is Not Online</response>
+            <response code="400">Delete resource not available</response>
         </member>
         <member name="M:TodoApi.Controllers.ValuesController.Get">
             <summary>

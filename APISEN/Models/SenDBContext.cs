@@ -197,11 +197,13 @@ namespace TodoApi.Models
 
 
                 //MySqlCommand cmd = new MySqlCommand("insert into dev_project (did,pid,date,hours,ot,description) " +
-                                                    //"values ("+devReportData.DID+","+devReportData.PID+"," 
-                                                    //+"\'"+devReportData.Date.ToString("yyyy-MM-dd")+"\'"+","+devReportData.Hours+","+overTimeHours+","+
-                                                    //"\'" + devReportData.Description + "\')", conn);
+                //"values ("+devReportData.DID+","+devReportData.PID+"," 
+                //+"\'"+devReportData.Date.ToString("yyyy-MM-dd")+"\'"+","+devReportData.Hours+","+overTimeHours+","+
+                //"\'" + devReportData.Description + "\')", conn);
 
-                status = cmd.ExecuteNonQuery();
+
+                    status = cmd.ExecuteNonQuery();
+                
 
             }
             return status;
@@ -261,7 +263,8 @@ namespace TodoApi.Models
                 status = cmd.ExecuteNonQuery();
 
             }
-            return status;
+
+                return status;
         }
 
         //SELECT* FROM dev_project WHERE date BETWEEN >= '2018-01-10' AND '2018-05-01';

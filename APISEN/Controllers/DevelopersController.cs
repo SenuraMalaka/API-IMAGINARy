@@ -16,7 +16,7 @@ namespace ApiSenDS.Controllers
         /// <param name="id">Developer ID</param>
         /// <returns>Json Object</returns>
         /// <response code="200">Json Object with OverTime Value</response>
-        /// <response code="400">Not Successful</response>
+        /// <response code="500">Database Is Not Online</response>
         [HttpGet("{id}")]
         public OTResult Get(int id)
         {

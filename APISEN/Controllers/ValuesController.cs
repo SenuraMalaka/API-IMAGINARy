@@ -28,9 +28,20 @@ namespace TodoApi.Controllers
         /// Get All the Developers
         /// </summary>
         [HttpGet]
-        public IEnumerable<Models.Developers> Get()
+        public Object Get()
         {
             Models.SenDBContext context = HttpContext.RequestServices.GetService(typeof(TodoApi.Models.SenDBContext)) as Models.SenDBContext;
+
+            List<Developers> developers1;
+
+            try
+            {
+                developers1 = context.GetAllDevelopers();
+            }catch(Exception ex){
+
+                return StatusCode(500, "Database is not Online");
+            }
+
 
             return context.GetAllDevelopers();  
 

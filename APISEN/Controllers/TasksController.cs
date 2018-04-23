@@ -23,6 +23,11 @@ namespace TodoApi.Controllers
         /// <summary>
         /// Create A Daily Record
         /// </summary>
+        /// <returns>Http Response</returns>
+        /// <response code="200">Updated the record</response>
+        /// <response code="500">Database Is Not Online</response>
+        /// <response code="400">Invalid json</response>
+        /// <response code="201">Record Created Successfully</response>
         [HttpPost]
         public IActionResult CreateANewDailyRecord([FromBody]DeveloperDailyReport reportingData)
         {
@@ -37,7 +42,7 @@ namespace TodoApi.Controllers
             int status = _context.InsertNewDeveloperDailyRecord(reportingData);
 
             if (status == 1)
-                return Ok();
+                return StatusCode(201,"Created the Resource");
             else
                 return BadRequest();
         }
@@ -61,6 +66,10 @@ namespace TodoApi.Controllers
         /// <summary>
         /// Update A Specific Developer Daily Record
         /// </summary>
+        /// <returns>Http Response</returns>
+        /// <response code="200">Updated the record</response>
+        /// <response code="500">Database Is Not Online</response>
+        /// <response code="400">Update resource not available</response>
         [HttpPut]
         public IActionResult updateDevData([FromBody]DeveloperDailyReport updatingData)
         {
@@ -91,6 +100,10 @@ namespace TodoApi.Controllers
         /// <summary>
         /// Delete A Specific Developer Daily Record
         /// </summary>
+        /// <returns>Http Response</returns>
+        /// <response code="200">Deleted the record</response>
+        /// <response code="500">Database Is Not Online</response>
+        /// <response code="400">Delete resource not available</response>
         [HttpDelete]
         public IActionResult deleteDevData([FromBody]DeveloperDailyReport updatingData)
         {
