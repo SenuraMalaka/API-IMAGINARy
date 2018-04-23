@@ -9,7 +9,7 @@ namespace ApiSenDS.Controllers
     [Route("api/[controller]")]
     public class DevelopersController: Controller
     {
-        // GET api/projects/1
+        // GET api/Developers/1
         /// <summary>
         /// Get The OverTime for a  Developer
         /// </summary>
