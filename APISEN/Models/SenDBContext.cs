@@ -151,21 +151,115 @@ namespace TodoApi.Models
 
 
 
-        public int InsertNewDeveloper (String devName)
+        public Developers GetADeveloperNameByID(String devID)
+        {
+            Developers devs=null;
+
+            using (MySqlConnection conn = GetConnection())
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand("select * from developers where did=" + devID, conn);
+
+
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        devs=new Developers()
+                        {
+                            Id = Convert.ToInt32(reader["did"]),
+                            Name = reader["name"].ToString(),
+                        };
+                    }
+                }
+            }
+            return devs;
+        }
+
+
+
+        public Projects GetProjectInfoByID(String pID)
+        {
+            Projects devs = null;
+
+            using (MySqlConnection conn = GetConnection())
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand("select * from project where pid=" + pID, conn);
+
+
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        devs = new Projects()
+                        {
+                            Id = Convert.ToInt32(reader["pid"]),
+                            Name = reader["name"].ToString(),
+                        };
+                    }
+                }
+            }
+            return devs;
+        }
+
+
+
+
+        public String InsertNewDeveloper (String devName)
         {
             List<Developers> list = new List<Developers>();
 
             int status = 0;
+            String newDevID=null;
 
             using (MySqlConnection conn = GetConnection())
             {
                 conn.Open();
                 MySqlCommand cmd = new MySqlCommand("insert into developers (name) values (\'"+devName+"\')", conn);
 
-                status = cmd.ExecuteNonQuery();// .ExecuteReader();
+                status = cmd.ExecuteNonQuery();
+
+
+                if (status == 1)
+                {
+                    cmd = new MySqlCommand("SELECT did FROM developers ORDER BY did DESC LIMIT 1", conn);
+
+                    newDevID = cmd.ExecuteScalar().ToString();
+                }
 
             }
-            return status;
+            return newDevID;
+        }
+
+
+
+
+
+        public String InsertNewProject(String pName)
+        {
+            List<Developers> list = new List<Developers>();
+
+            int status = 0;
+            String newProjID = null;
+
+            using (MySqlConnection conn = GetConnection())
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand("insert into project (name) values (\'" + pName + "\')", conn);
+
+                status = cmd.ExecuteNonQuery();
+
+
+                if (status == 1)
+                {
+                    cmd = new MySqlCommand("SELECT pid FROM project ORDER BY did DESC LIMIT 1", conn);
+
+                    newProjID = cmd.ExecuteScalar().ToString();
+                }
+
+            }
+            return newProjID;
         }
 
 

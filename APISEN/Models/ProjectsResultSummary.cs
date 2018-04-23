@@ -1,6 +1,9 @@
 ﻿using System;
 namespace TodoApi.Models
 {
+        /// <summary>
+        /// Project Summary Results Model
+        /// </summary>
     public class ProjectsResultSummary
     {
         public string Project { get; set; }

@@ -1,6 +1,9 @@
 ﻿using System;
 namespace TodoApi.Models
 {
+        /// <summary>
+        /// Developer Daily Report Request Fields
+        /// </summary>
     public class DeveloperDailyReport
     {
 

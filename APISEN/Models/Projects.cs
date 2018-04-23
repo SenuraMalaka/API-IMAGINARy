@@ -2,20 +2,13 @@
 namespace TodoApi.Models
 {
         /// <summary>
-        /// Developer Info
+        /// Project Info
         /// </summary>
-    public class Developers
+    public class Projects
     {
+        public int Id { get; set; }
 
-
-  
-        public int Id { get; set; }  
-  
         public string Name { get; set; }
-
-
-
-
 
     }
 }

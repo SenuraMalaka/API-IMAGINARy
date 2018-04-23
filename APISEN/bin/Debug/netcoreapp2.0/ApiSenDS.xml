@@ -4,7 +4,17 @@
         <name>ApiSenDS</name>
     </assembly>
     <members>
-        <member name="M:ApiSenDS.Controllers.DevelopersController.Get(System.Int32,System.String)">
+        <member name="M:ApiSenDS.Controllers.DevelopersController.Get(System.Int32)">
+            <summary>
+            Get a Specific Developer Details
+            </summary>
+            <param name="id">Developer ID</param>
+            <returns>Json Object</returns>
+            <response code="200">Json Object with Developer Info</response>
+            <response code="204">No Content To Display. Developer is not in the Database.</response>
+            <response code="500">Database Is Not Online</response>
+        </member>
+        <member name="M:ApiSenDS.Controllers.DevelopersController.GetOverTime(System.Int32)">
             <summary>
             Get The OverTime for a  Developer
             </summary>
@@ -14,18 +24,43 @@
             <response code="204">No Content To Display</response>
             <response code="500">Database Is Not Online</response>
         </member>
-        <member name="M:ApiSenDS.Controllers.DevelopersController.CreateANewDeveloper(TodoApi.Models.Developers)">
+        <member name="M:ApiSenDS.Controllers.DevelopersController.CreateANewDeveloper(TodoApi.Models.NewDeveloper)">
             <summary>
             Create A Developer
             </summary>
+            <param name="name">Developer Name</param>
+            <returns>Json Object with Developer Info URI</returns>
+            <response code="201">Created A New Developer</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Database Is Not Online</response>
         </member>
         <member name="M:ApiSenDS.Controllers.ProjectsController.Get(System.Int32)">
+            <summary>
+            Get a Specific Project Details
+            </summary>
+            <param name="id">Project ID</param>
+            <returns>Json Object</returns>
+            <response code="200">Json Object with Project Info</response>
+            <response code="204">No Content To Display. Project is not in the Database.</response>
+            <response code="500">Database Is Not Online</response>
+        </member>
+        <member name="M:ApiSenDS.Controllers.ProjectsController.GetSummary(System.Int32)">
             <summary>
             Get The Summary of Projects by ManagerID
             </summary>
             <param name="id">Manager ID</param>
             <returns>Json Array</returns>
             <response code="200">Json Array returned with Project Summary. An Empty Json Array will be returned if there is no records</response>
+            <response code="500">Database Is Not Online</response>
+        </member>
+        <member name="M:ApiSenDS.Controllers.ProjectsController.CreateANewDeveloper(TodoApi.Models.NewProject)">
+            <summary>
+            Create A Project
+            </summary>
+            <param name="name">Project Name</param>
+            <returns>Json Object with Project Info URI</returns>
+            <response code="201">Created A New Project</response>
+            <response code="400">Bad Request</response>
             <response code="500">Database Is Not Online</response>
         </member>
         <member name="M:TodoApi.Controllers.TasksController.CreateANewDailyRecord(TodoApi.Models.DeveloperDailyReport)">
@@ -69,6 +104,41 @@
         <member name="M:TodoApi.Controllers.ValuesController.CreateANewDeveloper(TodoApi.Models.Developers)">
             <summary>
             Create A Developer
+            </summary>
+        </member>
+        <member name="T:TodoApi.Models.DeveloperDailyReport">
+            <summary>
+            Developer Daily Report Request Fields
+            </summary>
+        </member>
+        <member name="T:TodoApi.Models.Developers">
+            <summary>
+            Developer Info
+            </summary>
+        </member>
+        <member name="T:TodoApi.Models.NewDeveloper">
+            <summary>
+            New Developer Required Fields
+            </summary>
+        </member>
+        <member name="T:TodoApi.Models.NewProject">
+            <summary>
+            New Project Required Field
+            </summary>
+        </member>
+        <member name="T:TodoApi.Models.OTResult">
+            <summary>
+            OverTime Results
+            </summary>
+        </member>
+        <member name="T:TodoApi.Models.Projects">
+            <summary>
+            Project Info
+            </summary>
+        </member>
+        <member name="T:TodoApi.Models.ProjectsResultSummary">
+            <summary>
+            Project Summary Results Model
             </summary>
         </member>
     </members>

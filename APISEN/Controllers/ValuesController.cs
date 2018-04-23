@@ -86,17 +86,17 @@ namespace TodoApi.Controllers
         [HttpPost]
         public IActionResult CreateANewDeveloper([FromBody]Developers newDevData)
         {
-            if (newDevData == null)
+            if (newDevData.Name == null)
             {
                 return BadRequest();
             }
 
             Models.SenDBContext _context = HttpContext.RequestServices.GetService(typeof(TodoApi.Models.SenDBContext)) as Models.SenDBContext;
 
-            int status = _context.InsertNewDeveloper(newDevData.Name);
+            String did = _context.InsertNewDeveloper(newDevData.Name);
 
 
-            return CreatedAtRoute("GetDevByID", new { id = status }, newDevData);
+            return CreatedAtRoute("GetDevByID", new { id = did }, newDevData);
         }
 
 
