@@ -82,11 +82,14 @@
             <response code="500">Database Is Not Online</response>
             <response code="400">Update resource not available</response>
         </member>
-        <member name="M:TodoApi.Controllers.TasksController.deleteDevData(TodoApi.Models.DeveloperDailyReport)">
+        <member name="M:TodoApi.Controllers.TasksController.deleteDevData(System.Int32,System.Int32,System.DateTime)">
             <summary>
             Delete A Specific Developer Daily Record
             </summary>
-            <returns>Http Response</returns>
+            <param name="did">Developer ID</param>
+            <param name="pid">Project ID</param>
+            <param name="date">Recorded Date Eg. MM-dd-yyyy</param>
+            <returns>Http Response Code</returns>
             <response code="200">Deleted the record</response>
             <response code="500">Database Is Not Online</response>
             <response code="400">Delete resource not available</response>

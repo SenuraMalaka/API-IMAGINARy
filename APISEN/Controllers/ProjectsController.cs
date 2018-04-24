@@ -78,7 +78,5 @@ namespace ApiSenDS.Controllers
                 return CreatedAtRoute("GetProjectInfo", new { id = newDeveloperID }, newProjData);
         }
 
-
-
     }
 }

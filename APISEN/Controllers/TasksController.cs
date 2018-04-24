@@ -90,35 +90,37 @@ namespace TodoApi.Controllers
 
 
 
-        //        {
-        //    "did":2,
-        //    "pid":2,
-        //    "date":"06/07/2018",
-        //}
 
-        // DELETE api/tasks
+
+        // DELETE api/tasks/1/2/06-26-2018
         /// <summary>
         /// Delete A Specific Developer Daily Record
         /// </summary>
-        /// <returns>Http Response</returns>
+        /// <param name="did">Developer ID</param>
+        /// <param name="pid">Project ID</param>
+        /// <param name="date">Recorded Date Eg. MM-dd-yyyy</param>
+        /// <returns>Http Response Code</returns>
         /// <response code="200">Deleted the record</response>
         /// <response code="500">Database Is Not Online</response>
         /// <response code="400">Delete resource not available</response>
-        [HttpDelete]
-        public IActionResult deleteDevData([FromBody]DeveloperDailyReport updatingData)
+        [HttpDelete("{did}/{pid}/{date}")]
+        public IActionResult deleteDevData(int did, int pid, DateTime date)
         {
-            if (updatingData == null)
+            if (did == 0 || pid == 0 || date.Equals(DateTime.MinValue))
             {
                 return BadRequest();
             }
             Models.SenDBContext _context = HttpContext.RequestServices.GetService(typeof(TodoApi.Models.SenDBContext)) as Models.SenDBContext;
 
-            int status = _context.deleteDeveloperDailyRecord(updatingData);
+            int status = _context.deleteDeveloperDailyRecord(did,pid,date);
 
-            if (status == 1)
+            if (status == 1){
                 return Ok();
-            else
+            }  
+            else{
                 return BadRequest();
+            }
+                
 
         }
 

@@ -336,7 +336,7 @@ namespace TodoApi.Models
 
 
 
-        public int deleteDeveloperDailyRecord(DeveloperDailyReport devReportData)
+        public int deleteDeveloperDailyRecord(int did, int pid, DateTime date)
         {
 
             int status = 0;
@@ -346,14 +346,11 @@ namespace TodoApi.Models
             {
                 conn.Open();
 
-                String delQuery = "DELETE FROM devProjectReports WHERE dpid=(select dpid from devProject where did=" + devReportData.DID + " AND " + "pid=" + devReportData.PID + ")" +
+                String delQuery = "DELETE FROM devProjectReports WHERE dpid=(select dpid from devProject where did=" + did + " AND " + "pid=" + pid + ")" +
                                                                                     " AND date=" + "\'"
-                                                                                    + devReportData.Date.ToString("yyyy-MM-dd") + "\'";
-
+                                                                                    + date.ToString("yyyy-MM-dd") + "\'";
 
                 MySqlCommand cmd = new MySqlCommand(delQuery, conn);
-
-
                 status = cmd.ExecuteNonQuery();
 
             }
