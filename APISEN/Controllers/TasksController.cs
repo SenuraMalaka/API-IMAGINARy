@@ -61,7 +61,7 @@ namespace TodoApi.Controllers
         //    "description":"worked 5 hours"
         //}
 
-        // PUT api/tasks/2
+        // PUT api/tasks/
 
         /// <summary>
         /// Update A Specific Developer Daily Record
