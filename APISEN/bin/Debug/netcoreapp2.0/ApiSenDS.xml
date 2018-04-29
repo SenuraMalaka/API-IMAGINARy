@@ -94,21 +94,6 @@
             <response code="500">Database Is Not Online</response>
             <response code="400">Delete resource not available</response>
         </member>
-        <member name="M:TodoApi.Controllers.ValuesController.Get">
-            <summary>
-            Get All the Developers
-            </summary>
-        </member>
-        <member name="M:TodoApi.Controllers.ValuesController.Get(System.Int32)">
-            <summary>
-            Get a Specific Developer Details
-            </summary>
-        </member>
-        <member name="M:TodoApi.Controllers.ValuesController.CreateANewDeveloper(TodoApi.Models.Developers)">
-            <summary>
-            Create A Developer
-            </summary>
-        </member>
         <member name="T:TodoApi.Models.DeveloperDailyReport">
             <summary>
             Developer Daily Report Request Fields
