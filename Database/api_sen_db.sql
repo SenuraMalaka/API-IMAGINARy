@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 22, 2018 at 08:28 PM
+-- Generation Time: Apr 24, 2018 at 05:19 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -22,11 +22,17 @@ SET time_zone = "+00:00";
 -- Database: `api_sen_db`
 --
 
+create database api_sen_db;
+use api_sen_db;
+
+--Senura Added The Above Create and Use DB Commands
+
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `developers`
 --
+
 
 CREATE TABLE `developers` (
   `did` int(11) NOT NULL,
@@ -42,7 +48,12 @@ INSERT INTO `developers` (`did`, `name`) VALUES
 (2, 'dinuka'),
 (3, 'Banuri'),
 (4, 'Pramitha'),
-(5, 'Sachith');
+(5, 'Sachith'),
+(6, 'Yomali'),
+(8, 'Someone'),
+(9, 'Heran'),
+(10, 'Derek'),
+(11, 'Manoja');
 
 -- --------------------------------------------------------
 
@@ -89,7 +100,6 @@ INSERT INTO `devProjectReports` (`dpid`, `date`, `hours`, `ot`, `description`) V
 (1, '2018-04-05', 9, 1, 'worked 9 hours'),
 (1, '2018-04-22', 8, 0, 'worked 8 hours'),
 (1, '2018-04-24', 9, 1, 'worked 9 hours'),
-(1, '2018-06-01', 14, 6, 'worked 14 hours'),
 (1, '2018-06-21', 16, 8, 'worked 16 hours'),
 (2, '2018-04-23', 7, 0, 'worked 7 hours'),
 (2, '2018-04-24', 8, 0, 'worked 8 hours'),
@@ -185,7 +195,7 @@ ALTER TABLE `project`
 -- AUTO_INCREMENT for table `developers`
 --
 ALTER TABLE `developers`
-  MODIFY `did` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `did` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `devProject`
