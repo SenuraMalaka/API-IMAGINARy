@@ -1,29 +1,32 @@
 ﻿<Properties StartupConfiguration="{4DA490B4-B88F-4C6C-8B6D-60C52CBB31A6}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="APISEN/Properties/launchSettings.json">
+  <MonoDevelop.Ide.Workbench ActiveDocument="APISEN/Controllers/DevelopersController.cs">
     <Files>
-      <File FileName="APISEN/Controllers/TasksController.cs" Line="20" Column="9" />
-      <File FileName="APISEN/Controllers/ValuesController.cs" Line="90" Column="14" />
-      <File FileName="APISEN/Models/DeveloperDailyReport.cs" Line="15" Column="1" />
-      <File FileName="APISEN/Models/Developers.cs" Line="12" Column="7" />
-      <File FileName="APISEN/Models/DevResult.cs" Line="11" Column="9" />
-      <File FileName="APISEN/Models/SenDBContext.cs" Line="259" Column="18" />
-      <File FileName="APISEN/Properties/launchSettings.json" Line="25" Column="9" />
+      <File FileName="APISEN/Controllers/TasksController.cs" Line="24" Column="34" />
+      <File FileName="APISEN/Controllers/ValuesController.cs" Line="39" Column="37" />
+      <File FileName="APISEN/Models/DeveloperDailyReport.cs" Line="14" Column="34" />
+      <File FileName="APISEN/Models/Developers.cs" Line="10" Column="9" />
+      <File FileName="APISEN/Models/DevResult.cs" Line="13" Column="6" />
+      <File FileName="APISEN/Models/SenDBContext.cs" Line="359" Column="10" />
+      <File FileName="APISEN/Properties/launchSettings.json" Line="30" Column="3" />
       <File FileName="APISEN/appsettings.Development.json" Line="1" Column="1" />
       <File FileName="APISEN/appsettings.json" Line="1" Column="1" />
-      <File FileName="APISEN/Program.cs" Line="1" Column="1" />
-      <File FileName="APISEN/Startup.cs" Line="21" Column="10" />
-      <File FileName="APISEN/Controllers/ProjectsController.cs" Line="64" Column="19" />
-      <File FileName="APISEN/Models/ProjectsResultSummary.cs" Line="15" Column="1" />
-      <File FileName="APISEN/Controllers/DevelopersController.cs" Line="72" Column="9" />
-      <File FileName="APISEN/Models/OTResult.cs" Line="9" Column="2" />
-      <File FileName="APISEN/Models/NewDeveloper.cs" Line="7" Column="3" />
-      <File FileName="APISEN/Models/Projects.cs" Line="2" Column="18" />
-      <File FileName="APISEN/Models/NewProject.cs" Line="6" Column="41" />
+      <File FileName="APISEN/Program.cs" Line="25" Column="2" />
+      <File FileName="APISEN/Startup.cs" Line="5" Column="10" />
+      <File FileName="APISEN/Controllers/ProjectsController.cs" Line="46" Column="13" />
+      <File FileName="APISEN/Models/ProjectsResultSummary.cs" Line="5" Column="42" />
+      <File FileName="APISEN/Controllers/DevelopersController.cs" Line="34" Column="9" />
+      <File FileName="APISEN/Models/OTResult.cs" Line="8" Column="6" />
+      <File FileName="APISEN/Models/NewDeveloper.cs" Line="12" Column="1" />
+      <File FileName="APISEN/Models/Projects.cs" Line="5" Column="25" />
+      <File FileName="APISEN/Models/NewProject.cs" Line="10" Column="19" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/senura/Projects/API-IMAGINARy/APISEN/Models/SenDBContext.cs" relfile="APISEN/Models/SenDBContext.cs" line="247" column="14" />
+      <Breakpoint file="/Users/senura/Projects/API-IMAGINARy/APISEN/Controllers/TasksController.cs" relfile="APISEN/Controllers/TasksController.cs" line="75" column="10" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.ApiSenDS PreferredExecutionTarget="MonoDevelop.Default" />

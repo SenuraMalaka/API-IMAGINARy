@@ -33,7 +33,7 @@ namespace TodoApi
 
                     services.AddSwaggerGen(c =>  
               {  
-                c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });  
+                c.SwaggerDoc("v1", new Info { Title = "API Senura - 10569142", Version = "v1" });  
                 var basePath = PlatformServices.Default.Application.ApplicationBasePath;
                 var xmlPath = Path.Combine(basePath, "ApiSenDS.xml");
                   c.IncludeXmlComments(xmlPath);

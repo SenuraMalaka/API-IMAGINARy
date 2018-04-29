@@ -26,6 +26,7 @@
 /Users/senura/Projects/API-IMAGINARy/APISEN/bin/Debug/netcoreapp2.0/ApiSenDS.runtimeconfig.dev.json
 /Users/senura/Projects/API-IMAGINARy/APISEN/bin/Debug/netcoreapp2.0/ApiSenDS.dll
 /Users/senura/Projects/API-IMAGINARy/APISEN/bin/Debug/netcoreapp2.0/ApiSenDS.pdb
+/Users/senura/Projects/API-IMAGINARy/APISEN/obj/Debug/netcoreapp2.0/ApiSenDS.csprojResolveAssemblyReference.cache
 /Users/senura/Projects/API-IMAGINARy/APISEN/obj/Debug/netcoreapp2.0/ApiSenDS.csproj.CoreCompileInputs.cache
 /Users/senura/Projects/API-IMAGINARy/APISEN/obj/Debug/netcoreapp2.0/ApiSenDS.AssemblyInfoInputs.cache
 /Users/senura/Projects/API-IMAGINARy/APISEN/obj/Debug/netcoreapp2.0/ApiSenDS.AssemblyInfo.cs
